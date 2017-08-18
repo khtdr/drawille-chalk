@@ -1,6 +1,10 @@
-# node-drawille [![Build Status](https://travis-ci.org/madbence/node-drawille.svg)](https://travis-ci.org/madbence/node-drawille)
+# drawille-chalk 
 
-> drawing in terminal with [unicode braille][] characters. The idea is based on [drawille](https://github.com/asciimoo/drawille) by @asciimoo.
+> drawing in terminal with [unicode braille][] characters _and color_. The idea is based on [drawille](https://github.com/asciimoo/drawille) by @asciimoo.
+
+[![NPM version](https://img.shields.io/npm/v/drawille-chalk.svg)](https://www.npmjs.com/package/drawille-chalk)
+[![npm](https://img.shields.io/npm/dm/drawille-chalk.svg)]()
+[![npm](https://img.shields.io/npm/dt/drawille-chalk.svg)]()
 
 ![rainbow](rainbow.png)
 ![sin-wave](sin-wave.gif)
@@ -23,7 +27,8 @@ See [examples](examples).
 
 this module provides a very basic API only, for fancy things, like drawing lines, use another module, like [`bresenham`](https://github.com/madbence/node-bresenham).
 
-[`drawille-canvas`](https://github.com/madbence/node-drawille-canvas) provides HTML5 Canvas API for drawille.
+[`node-drawille`](https://github.com/madbence/node-drawille) original project
+forked from.
 
 ## api
 
@@ -64,12 +69,6 @@ Adds a formatting function to apply to set points upon rendering.
 ### `canvas.styleEnd()`
 
 Clear current formatting.
-
-## projects
-
-- [`vtop`](https://github.com/MrRio/vtop) uses it to draw CPU and memory usage charts in the terminal
-- [`datop`](https://github.com/maxogden/datop) uses it to draw [dat](https://github.com/maxogden/dat) statistics
-- [`boscillate`](https://www.npmjs.org/package/boscillate) uses it to draw [`baudio`](https://github.com/substack/baudio) soundwaves in real-time
 
 ## license
 
