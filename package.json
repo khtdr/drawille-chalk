@@ -1,22 +1,29 @@
 {
-  "name": "drawille",
-  "version": "1.1.0",
-  "description": "Drawing in terminal with unicode braille characters",
+  "name": "drawille-chalk",
+  "version": "1.1.1",
+  "description": "Drawing in terminal with unicode braille characters and color",
   "main": "index.js",
   "scripts": {
     "test": "echo \"OK 1337/1337 passed! (100%)\""
   },
-  "author": "Bence Dányi <madbence@gmail.com>",
+  "contributors": [
+    "Bence Dányi <madbence@gmail.com> (www.github.com/madbence)",
+    "Oh Kay <khtdr.com@gmail.com> (www.github.com/khtdr)"
+  ],
   "repository": {
     "type": "git",
-    "url": "git@github.com:madbence/node-drawille.git"
+    "url": "git@github.com:khtdr/drawille-chalk.git"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/madbence/node-drawille/issues"
+    "url": "https://github.com/khtdr/drawille-chalk/issues"
   },
   "devDependencies": {
+    "blessed": "^0.1.81",
     "bresenham": "0.0.3",
     "gl-matrix": "^2.1.0"
+  },
+  "dependencies": {
+    "chalk": "^2.1.0"
   }
 }

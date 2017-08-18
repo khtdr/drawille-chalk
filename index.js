@@ -6,6 +6,7 @@ var map = [
 ]
 
 function Canvas(width, height) {
+  this.fns = [s=>s];
   if (width == null) {
     width = process.stdout.columns * 2 - 2;
   }
@@ -15,6 +16,7 @@ function Canvas(width, height) {
 
   this.width = width;
   this.height = height;
+  this.chalk = Canvas.chalk;
 }
 
 Object.defineProperties(Canvas.prototype, {
@@ -27,6 +29,8 @@ Object.defineProperties(Canvas.prototype, {
       this._width = width;
       this.content = new Buffer(this.width*this.height/8);
       this.content.fill(0);
+      this.stylers = new Array(this.width*this.height/8);
+      this.stylers.fill(this.fns[0]);
     }
   },
   height: {
@@ -38,6 +42,8 @@ Object.defineProperties(Canvas.prototype, {
       this._height = height;
       this.content = new Buffer(this.width*this.height/8);
       this.content.fill(0);
+      this.stylers = new Array(this.width*this.height/8);
+      this.stylers.fill(this.fns[0]);
     }
   }
 });
@@ -45,12 +51,15 @@ Object.defineProperties(Canvas.prototype, {
 var methods = {
   set: function(coord, mask) {
     this.content[coord] |= mask;
+    this.stylers[coord] = this.fns[0];
   },
   unset: function(coord, mask) {
     this.content[coord] &= ~mask;
+    this.stylers[coord] = this.fns[0];
   },
   toggle: function(coord, mask) {
     this.content[coord] ^= mask;
+    this.stylers[coord] = this.fns[0];
   }
 };
 
@@ -73,6 +82,17 @@ Canvas.prototype.clear = function() {
   this.content.fill(0);
 };
 
+Canvas.prototype.styleEnd = function () {
+  this.fns.shift();
+  if (!this.fns.length) {
+    this.fns = [s=>s];
+  }
+};
+
+Canvas.prototype.style = function (fn) {
+  this.fns.unshift(fn);
+};
+
 Canvas.prototype.frame = function frame(delimiter) {
   if (delimiter == null) {
     delimiter = '\n';
@@ -83,14 +103,16 @@ Canvas.prototype.frame = function frame(delimiter) {
       result.push(delimiter);
       j = 0;
     }
-    if(this.content[i] == 0) {
-      result.push(' ');
-    } else {
-      result.push(String.fromCharCode(0x2800 + this.content[i]))
+    let s = ' ';
+    if(this.content[i] !== 0) {
+      s = String.fromCharCode(0x2800 + this.content[i]);
     }
+    result.push(this.stylers[i](s));
   }
   result.push(delimiter);
   return result.join('');
 };
+
+Canvas.chalk = require('chalk');
 
 module.exports = Canvas;
