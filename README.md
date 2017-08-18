@@ -2,8 +2,8 @@
 
 > drawing in terminal with [unicode braille][] characters. The idea is based on [drawille](https://github.com/asciimoo/drawille) by @asciimoo.
 
-![cube](rainbow.gif)
-![cube](sin-wave.gif)
+![rainbow](rainbow.png)
+![sin-wave](sin-wave.gif)
 
 ## install
 
