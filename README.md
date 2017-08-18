@@ -7,10 +7,14 @@
 
 ## install
 
-install the [package](https://npmjs.com/drawille) with `npm`:
+install the [package](https://npmjs.com/drawille-chalk) with `npm` or `yarn`:
 
 ```
-$ npm install --save drawille
+$ npm install --save drawille-chalk
+```
+or
+```
+$ yarn add drawille-chalk
 ```
 
 ## usage
@@ -52,6 +56,14 @@ string. `delimiter` defaults to `\n`.
 it uses braille characters to represent points,
 so every line has length of `w/2`, and the string contains `h/4`
 lines.
+
+### `canvas.style(canvas.chalk.*)`
+
+Adds a formatting function to apply to set points upon rendering.
+
+### `canvas.styleEnd()`
+
+Clear current formatting.
 
 ## projects
 
