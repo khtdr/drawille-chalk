@@ -5,12 +5,14 @@
 [![NPM version](https://img.shields.io/npm/v/drawille-chalk.svg)](https://www.npmjs.com/package/drawille-chalk)
 [![npm](https://img.shields.io/npm/dm/drawille-chalk.svg)]()
 [![npm](https://img.shields.io/npm/dt/drawille-chalk.svg)]()
+[![Dependency Status](https://david-dm.org/khtdr/drawille-chalk/master.svg)](https://david-dm.org/khtdr/drawille-chalk/master)
+[![devDependency Status](https://david-dm.org/khtdr/drawille-chalk/master/dev-status.svg)](https://david-dm.org/khtdr/drawille-chalk/master#type=dev)
 
 ![rainbow](rainbow.png)
 ![sin-wave](sin-wave.gif)
 
 #### updates
-*Aril 20 2019* upgrade dependencies to remove deprecation warnings <code>1.1.1 -> 1.1.2</code>
+<code>1.1.1 -> 1.1.2</code> *4-20, 2019* upgrade dependencies to remove deprecation warnings
 
 ## install
 
