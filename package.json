@@ -23,10 +23,10 @@
   },
   "devDependencies": {
     "blessed": "^0.1.81",
-    "bresenham": "0.0.3",
-    "gl-matrix": "^2.1.0"
+    "bresenham": "0.0.4",
+    "gl-matrix": "^3.0.0"
   },
   "dependencies": {
-    "chalk": "^2.1.0"
+    "chalk": "^2.4.2"
   }
 }

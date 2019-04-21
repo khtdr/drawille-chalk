@@ -1,5 +1,4 @@
 let Canvas = require('../');
-let line = require('bresenham');
 
 const W = process.stdout.columns * 2;
 const H = (process.stdout.rows - 2) * 4;
