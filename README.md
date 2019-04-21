@@ -9,6 +9,9 @@
 ![rainbow](rainbow.png)
 ![sin-wave](sin-wave.gif)
 
+#### updates
+*Aril 20 2019* upgrade dependencies to remove deprecation warnings <code>1.1.1 -> 1.1.2</code>
+
 ## install
 
 install the [package](https://npmjs.com/drawille-chalk) with `npm` or `yarn`:
